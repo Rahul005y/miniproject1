@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #0e0632;
+    padding: 10px;
+   
+}
+
+
+.allcard{
+    display: flex;
+    gap: 15px;
+    flex-wrap:wrap;  
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     color: aliceblue;
+     padding: 20px;
+}
+
+
+.card {
+    height: 350px;
+    width: 250px;
+    background-color: aqua;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Default first image visible */
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s ease;
+    opacity: 1;
+}
+
+/* Second image hidden by default */
+.card #img1 {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Buttons animation (your original idea) */
+.btn {
+    height: 30%;
+    width: 100%;
+    bottom: -60%;
+   background-color: hsla(279, 24%, 16%, 0.2);
+
+
+    position: absolute;
+    transition: all ease-in 1s;
+}
+
+.btn1 {
+    height: 30%;
+    width: 100%;
+  background-color: hsla(150, 100%, 37%, 0.2);
+    top: -40%;
+    position: absolute;
+    transition: all ease-in 1s;
+}
+
+.card:hover .btn {
+    bottom: 0%;
+}
+
+.card:hover .btn1 {
+    top: 0%;
+}
+
+
+.card:hover img {
+    opacity: 0;
+}
+
+.card:hover #img1 {
+    opacity: 1;
+}
